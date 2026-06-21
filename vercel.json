@@ -1,0 +1,18 @@
+{
+  "builds": [
+    {
+      "src": "api/gif.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/image.png",
+      "destination": "api/gif.py"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "api/gif.py"
+    }
+  ]
+}
